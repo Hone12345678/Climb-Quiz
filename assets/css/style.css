@@ -1,0 +1,57 @@
+
+body{
+    font-family: Helvica;
+    color:black;
+    display: flex;
+    background-image: linear-gradient(to bottom right, rgb(29, 2, 29), rgb(229, 124, 255));
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    min-height: 100vh;
+    
+}
+
+.container {
+   
+}
+
+.content{
+    width: 40%;
+    height: 70%;
+    background-color: rgb(245, 241, 245);
+    color:rgb(83, 23, 83);
+    border-style: solid;
+    border-radius: 5%;
+    border: rgb(29, 2, 29);
+    padding-top: 10px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.content button {
+    
+    background-color: rgb(83, 23, 83);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 100px;
+    position: relative;
+}
+
+.content button:hover {
+    background-color: rgb(122, 50, 139);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    font-size: 10px;
+    
+    
+}

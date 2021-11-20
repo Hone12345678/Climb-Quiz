@@ -6,3 +6,7 @@ var startQuizBtnEl = document.querySelector("#startQuizBtn");
 startQuizBtnEl.addEventListener("click", function() {
     console.log("test")
 });
+
+// if they click start quiz button click event triggers function with Quiz
+
+//where to create the buttons?
