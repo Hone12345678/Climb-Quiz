@@ -1,12 +1,14 @@
 
 //setting variabls
 var startQuizBtnEl = document.querySelector("#startQuizBtn");
-var questionsList = document.querySelector(".container-questions");
-var timerEl = document.getElementById('countdown');
-var mainEl = document.getElementById('main');
+var questionsList = document.querySelector(".containerQuestions");
+var qTimer = document.getElementById('quizTimer');
 var nextButton = document.getElementById('nextButton');
+var displayResults = document.getElementById('.containerResults');
 
-var i = 0;
+
+
+var i = -1;
 
 startQuizBtnEl.addEventListener("click", startTheQuiz, countdown);
  
@@ -27,10 +29,19 @@ startQuizBtnEl.addEventListener("click", startTheQuiz, countdown);
     nextButton.addEventListener("click", nextQuestion);
     function nextQuestion (){
 
-        i++;
-    console.log(i)
+        if(i < 3) {
+            i++;
+        } else {
+            
+
+            questionsList.classList.add("hide");
+            displayResults.classList.remove("hide");
+
+
+
+        }
+            
     
-    }
 
     //accesses the quiz questions stored in 'questionsArray.js
     var questionTextForHTML = questions[i].question
@@ -40,22 +51,19 @@ startQuizBtnEl.addEventListener("click", startTheQuiz, countdown);
 
     return i
     
-
+   }
 };
-
-
-
-
 
 
 function countdown() {
     var timeLeft = 75;
 
     var timeInterval = setInterval(function() {
-        timerEl.textContent = timeLeft;
+        qTimer.textContent = "Time Remaining: " + timeLeft;
         if(timeLeft=== 0) {
-            timerEl.textContent = "Times Up!"
+            qTimer.textContent = "Times Up!"
             clearInterval(timeInterval);
+            questionsList.classList.add("hide");
         }else{
             timeLeft--;
         }
