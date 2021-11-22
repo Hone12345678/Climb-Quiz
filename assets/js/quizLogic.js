@@ -20,11 +20,14 @@ startQuizBtnEl.addEventListener("click", startTheQuiz, countdown);
     //displays the question to the user
     var startLanding = document.querySelector(".container");
     startLanding.classList.add("hide");
+   
     
     //displays the questions to the user
 
     //hides the landing page from the user
     questionsList.classList.remove("hide");
+    
+    
 
     nextButton.addEventListener("click", nextQuestion);
     function nextQuestion (){
@@ -33,15 +36,10 @@ startQuizBtnEl.addEventListener("click", startTheQuiz, countdown);
             i++;
         } else {
             
-
             questionsList.classList.add("hide");
             displayResults.classList.remove("hide");
-
-
-
         }
             
-    
 
     //accesses the quiz questions stored in 'questionsArray.js
     var questionTextForHTML = questions[i].question
@@ -49,8 +47,6 @@ startQuizBtnEl.addEventListener("click", startTheQuiz, countdown);
     questionArea.innerHTML = questionTextForHTML
     // content-question.append(questionArea);
 
-    return i
-    
    }
 };
 

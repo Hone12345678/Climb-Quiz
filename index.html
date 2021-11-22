@@ -7,19 +7,21 @@
     <title>Climbing Quiz</title>
     <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
+
+
 <body>
 
-    
-    <!-- button to start the quiz -->
-    
+    <!-- start main section of quiz start-->
         <div class="container">
             <div class="content">
                 <h2>Climbing Quiz</h2>
+                <!-- quiz directions -->
                 <p>Answer the following code-related questions within the time limit. keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+                 <!-- button to start the quiz -->
                 <button id="startQuizBtn">Start the Quiz!</button>
             </div>
         </div>
-
+        <!-- this remains hidden until the start button click event is triggered using 'hide' -->
         <div class="containerQuestions hide" >
             <div class="content-question">
                 <h2 id="quizTimer"></h2>
@@ -39,6 +41,7 @@
                 <button id="playAgain">Play Again</button>
             </div>
         </div>
+        <!-- end main section of quiz end-->
     
 
 <!--start footer section start-->
