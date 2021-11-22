@@ -4,19 +4,15 @@ var startQuizBtnEl = document.querySelector("#startQuizBtn");
 var questionsList = document.querySelector(".containerQuestions");
 var qTimer = document.getElementById('quizTimer');
 var nextButton = document.getElementById('nextButton');
-var displayResults = document.getElementById('.containerResults');
-
-
-
+var displayResults = document.getElementById(".containerResults");
 var i = -1;
+var timeLeft;
 
-startQuizBtnEl.addEventListener("click", startTheQuiz, countdown);
- 
+// starts the quiz and timer
+startQuizBtnEl.addEventListener("click", startTheQuiz, countdown(), );
+
  function startTheQuiz (){
-
-    
-
-
+   
     //displays the question to the user
     var startLanding = document.querySelector(".container");
     startLanding.classList.add("hide");
@@ -27,8 +23,7 @@ startQuizBtnEl.addEventListener("click", startTheQuiz, countdown);
     //hides the landing page from the user
     questionsList.classList.remove("hide");
     
-    
-
+    // when 'next' button is clicked the if else statement increments until all questions have been displayed
     nextButton.addEventListener("click", nextQuestion);
     function nextQuestion (){
 
@@ -45,33 +40,41 @@ startQuizBtnEl.addEventListener("click", startTheQuiz, countdown);
     var questionTextForHTML = questions[i].question
     var questionArea = document.getElementById("climbQuestions");
     questionArea.innerHTML = questionTextForHTML
-    // content-question.append(questionArea);
 
    }
+
 };
 
 
-function countdown() {
+// start timer Start
+//  countdown timer starts once 'Start the Quiz!' has been clicked
+function countdown(timeLeft) {
     var timeLeft = 75;
 
-    var timeInterval = setInterval(function() {
+    setInterval(function() {
         qTimer.textContent = "Time Remaining: " + timeLeft;
-        if(timeLeft=== 0) {
+        if(timeLeft === 0) {
             qTimer.textContent = "Times Up!"
-            clearInterval(timeInterval);
+            clearInterval(timeLeft);
             questionsList.classList.add("hide");
         }else{
             timeLeft--;
         }
- 
+
     },1000);
-    
+
 }
-countdown();
+// end timer end
 
-// if they click start quiz button click event triggers function with Quiz
+// need to figure out how to make the quiz answers store a value of correct or incorrect
 
-//where to create the buttons?
+
+// END
+
+
+
+
+
 
 
 

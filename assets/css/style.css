@@ -1,4 +1,15 @@
+/* '*' format applies to all */
+* {
+    font-family: Arial, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+}
 
+/* used to hide or display content when added or removed using JavaScript quizLogic.js */
+.hide {
+    display: none;
+}
+
+
+/* start general formatting for content contained within body start */
 body{
     font-family: Helvica;
     color:black;
@@ -7,11 +18,14 @@ body{
     align-items: center;
     justify-content: space-around;
     margin: 0;
-    min-height: 100vh;
-    
+    min-height: 100vh; 
 }
+/* end general formatting for content contained within body end */
 
 
+/* start initial landing page  start */
+
+/* start general formating of box containing directions start */
 .content{
     width: 40%;
     height: 70%;
@@ -30,7 +44,9 @@ body{
     max-width: 800px;
     margin: auto;
 }
+/* end general formating of box containing directions  end */
 
+/* start formating 'Start the Quiz!' button start */
 .content button {
     
     background-color: rgb(83, 23, 83);
@@ -40,26 +56,75 @@ body{
     padding: 10px 50px;
     position: relative;
 }
+/* end formating 'Start the Quiz!' button end */
 
+/* start adding hover effect to 'Start the Quiz!' button start */
 .content button:hover {
     background-color: rgb(122, 50, 139);
 }
+/* end adding hover effect to 'Start the Quiz!' button end */
 
 
+/* end initial landing page end */
+/* start question page  start */
+
+
+/* start general formating of box containing questions start */
+.content-question {
+    width: 40%;
+    height: 70%;
+    background-color: rgb(83, 23, 83);
+    color:rgb(245, 241, 245);
+    border-style: solid;
+    border-radius: 5%;
+    border: rgb(29, 2, 29);
+    padding-top: 10px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+/* end general formating of box containing questions end */
+
+/* start formating 'next' button start */
+.content-question Button {
+    background-color: rgb(122, 50, 139);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 50px;
+    position: relative;
+}
+/* end formating 'next' button end */
+
+/* start adding hover effect to 'next' button start */
+.content-question button:hover {
+    background-color: rgb(83, 23, 83);
+}
+/* end adding hover effect to 'next' button end */
+
+/* start formating quiz timer start */
 #quizTimer {
     color: rgb(255, 255, 255);
     margin-right: 500px;
-   
-
 }
+/* end formating quiz timer end */
 
+
+/* question page  */
+
+
+/* start start */
 footer {
     position: fixed;
     bottom: 0;
     font-size: 10px;
-    
-    
 }
- .hide {
- display: none;
- }
+/* end end */
+
+
+/* END */

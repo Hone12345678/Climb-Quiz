@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 
-
 <body>
 
+
     <!-- start main section of quiz start-->
+
         <div class="container">
             <div class="content">
                 <h2>Climbing Quiz</h2>
@@ -21,26 +22,34 @@
                 <button id="startQuizBtn">Start the Quiz!</button>
             </div>
         </div>
+
+
         <!-- this remains hidden until the start button click event is triggered using 'hide' -->
         <div class="containerQuestions hide" >
             <div class="content-question">
+                <!-- interacts with quizlogic.js to generate a timer once the start button is clicked -->
                 <h2 id="quizTimer"></h2>
                 <h2>Questions</h2>
+                <!-- interacts with both the quizlogic.js and the array stored in questionArray -->
                 <p id="climbQuestions"></p>
-                <!-- <button id="startQuizBtn">Start the Quiz!</button> -->
-              
-                
+                <!-- next button allows for the itteration through the questions array -->
                 <button id="nextButton">next</button>
             </div>
         </div>
 
+
+        <!-- this remains hidden until the user completes the quiz and the results are displayed -->
         <div class="containerResults hide">
             <div class="contentResults">
+                <!-- displays end results to user -->
                 <h2>Results</h2>
+                <!--displays final score and allows for the user to save and store initials and score interacting with score.js -->
                 <p id="resultsDisplay">results</p>
+                 <!-- allows user to take the quiz again -->
                 <button id="playAgain">Play Again</button>
             </div>
         </div>
+
         <!-- end main section of quiz end-->
     
 
@@ -49,9 +58,16 @@
     <h3>Created By: Owen Haugen</h2>
 </footer>
  <!--end footer section end-->
+
+
+  <!-- imports .js scripts -->
     <script src="assets/js/quizLogic.js"></script>
     <script src="assets/js/questionArray.js"></script>
     <script src="assets/js/score.js"></script>
 
+
 </body>
+
 </html>
+
+<!-- END -->
