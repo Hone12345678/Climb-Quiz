@@ -1,4 +1,4 @@
-# Code-Quiz
+# Climb-Quiz
 
 ## Purpose
 Demonstrating the use of Web APIs by creating a timed multiple choice quize that uses click events saves user initals with score and interacts with a timer
@@ -9,7 +9,7 @@ Demonstrating the use of Web APIs by creating a timed multiple choice quize that
 * JavaScript
 
 ## Website
-https://hone12345678.github.io/Code-Quiz/
+https://hone12345678.github.io/Climb-Quiz/
 
 
 ## ScreenShot
