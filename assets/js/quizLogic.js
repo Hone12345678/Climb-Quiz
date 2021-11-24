@@ -4,9 +4,10 @@ var startQuizBtnEl = document.querySelector("#startQuizBtn");
 var questionsList = document.querySelector(".containerQuestions");
 var qTimer = document.getElementById('quizTimer');
 var nextButton = document.getElementById('nextButton');
-var displayResults = document.getElementById(".containerResults");
-var i = -1;
+var displayResults = document.querySelector(".containerResults");
+var i = 0;
 var timeLeft;
+var choicesEl = document.getElementById("choices")
 
 // starts the quiz and timer
 startQuizBtnEl.addEventListener("click", startTheQuiz, countdown(), );
@@ -24,26 +25,60 @@ startQuizBtnEl.addEventListener("click", startTheQuiz, countdown(), );
     questionsList.classList.remove("hide");
     
     // when 'next' button is clicked the if else statement increments until all questions have been displayed
-    nextButton.addEventListener("click", nextQuestion);
-    function nextQuestion (){
-
-        if(i < 3) {
-            i++;
-        } else {
-            
-            questionsList.classList.add("hide");
-            displayResults.classList.remove("hide");
-        }
-            
-
-    //accesses the quiz questions stored in 'questionsArray.js
-    var questionTextForHTML = questions[i].question
-    var questionArea = document.getElementById("climbQuestions");
-    questionArea.innerHTML = questionTextForHTML
-
-   }
+   nextQuestion()
+    
 
 };
+
+function nextQuestion (){
+
+
+    // if(i < 3) {
+    //     i++;
+    // } else {
+        
+    //     questionsList.classList.add("hide");
+    //     displayResults.classList.remove("hide");
+    // }
+        
+
+//accesses the quiz questions stored in 'questionsArray.js
+var questionTextForHTML = questions[i]
+var questionArea = document.getElementById("climbQuestions");
+questionArea.textContent = questionTextForHTML.question
+
+choicesEl.innerHTML = ""
+
+questionTextForHTML.choices.forEach( function(choices, index){
+    var choiceBtns = document.createElement("button");
+    choiceBtns.setAttribute("class", "choices")
+    choiceBtns.setAttribute("value", choices)
+    choiceBtns.textContent = index + 1 + ": " + choices
+    choiceBtns.onclick = questionClick;
+    choicesEl.appendChild(choiceBtns)
+})
+ 
+}
+
+function questionClick(){
+    //this . value to compare the anwers !==
+
+
+    i++
+if (i === questions.length){
+    alert("quiz has ended")
+}else{
+    nextQuestion();
+}
+
+
+    console.log(i)
+
+
+}
+
+
+
 
 
 // start timer Start
