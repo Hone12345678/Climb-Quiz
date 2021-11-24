@@ -13,7 +13,8 @@ https://hone12345678.github.io/Climb-Quiz/
 
 
 ## ScreenShot
-![image](https://user-images.githubusercontent.com/46331608/142776546-59cab803-24e9-4bf1-bcf6-e477c1192e25.png)
+![image](https://user-images.githubusercontent.com/46331608/142812884-86a1a30a-9434-4bbf-a8b0-0907fa775df3.png)
+
 
 
 
